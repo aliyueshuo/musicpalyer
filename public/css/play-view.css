@@ -1,0 +1,55 @@
+
+#bgr-packge{
+	height: 400px;
+	width: 400px;
+	background: url(../img/player_cover.png);
+	border-radius: 50%;
+	background-size: 100% 100%;
+	margin:100px auto;
+	animation:;
+}
+@keyframes rotate{
+	from{transform: rotateZ(0);}
+	to{transform: rotateZ(360deg);}
+}
+.blur {	
+    filter: url(blur.svg#blur)  brightness(80%); /* FireFox, Chrome, Opera */
+    
+    -webkit-filter: blur(80px); /* Chrome, Opera */
+       -moz-filter: blur(80px);
+        -ms-filter: blur(80px);    
+            filter: blur(70px);
+    
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=80, MakeShadow=false); /* IE6~IE9 */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#lyrics{
+	height: 750px;
+	width: 100%;
+	text-align: center;
+	color: gainsboro;
+	overflow: hidden;
+	overflow-Y: scroll;
+ 
+}
+#lyrics p{
+font-size: 32px;
+}
+ body *{
+	max-height: 99999px;
+}
+#lyrics li {
+	margin: 20px;list-style: none;font-size: 36px;
+	color: gainsboro;
+	filter: brightness(80%);
+}
+.birght-ly{
+	filter: brightness(150%) !important;
+	color: white  !important;
+}

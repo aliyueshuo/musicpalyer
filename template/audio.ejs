@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="UTF-8">
+			<link rel="shortcut icon"type="image/x-icon" href="img/stop.jpg" media="screen" />
+		<title></title>
+		<style type="text/css">
+			#audio-player{
+				margin: 200px auto;
+				height: 15px;
+				width: 520px;
+				border: 5px solid aqua;
+				position: relative;
+				background: yellow;
+			}
+			#play-white{
+				width: 0px;
+				height: 5px;
+				background: whitesmoke;
+				position: absolute;
+				left: 0px;
+				top: 5px;
+				z-index: 2;
+				transition: all 3000ms linear;
+			}
+			#play-gray{
+				width: 500px;
+				height: 5px;
+				background: gray;
+				position: absolute;
+				left: 0px;
+				top: 5px;
+				z-index: 1;
+
+			}
+			#play-point{
+				width: 15px;
+				height: 15px;
+				background: whitesmoke;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				z-index: 2;
+				border-radius: 50%;
+								transition: all 3000ms linear;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="audio-player">
+			
+			<div id="play-white">
+				
+			</div>
+			<div id="play-point">
+				
+			</div>
+			<div id="play-gray">
+				
+			</div>
+		</div>
+		<script type="text/javascript">
+			var point = document.getElementById('play-point');
+			var white = document.getElementById('play-white');
+			var Aplayer = document.getElementById('audio-player');
+			
+			Aplayer.onclick = e=>{
+				
+				let xPos = e.screenX;
+				
+				point.style.left = xPos - 510 + 'px';
+				white.style.width = xPos - 510 + 'px';
+				
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>
